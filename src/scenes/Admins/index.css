@@ -1,0 +1,103 @@
+.Admin_gird{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 2px 10px 5px;
+}
+.Admin{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Admin_container{
+    width: 100%;
+    border-width: 14px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    margin: 2px;
+}
+.Admin_infromation{
+    display: flex;
+    align-items: center;
+}
+.Admin_avatar{
+    padding: 3px;
+    padding-right: 10px;
+}
+.buttons{
+    display: flex;
+}
+.button_display{
+    background-color: #389b5f;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    transform: translateY(2px);
+    text-decoration: none;   
+    cursor: pointer;
+    transition-duration: 0.4s;
+    color: white;
+    margin: 10px
+}
+.pagination_container{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.popup_container{
+    border-radius: 5px;
+}
+.popup_container, .overlay{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.overlay{
+    background: rgba(49, 49, 49, 0.284);
+}
+.popu_content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #389b5f;
+    padding: 14px 28px;
+    border-radius: 3px;
+    min-width: 750px;
+    min-height: 544px;
+}
+.close_popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+.body.active-popup {
+    overflow-y: hidden;
+}
+.admin_info{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.admin_data{
+    border-radius: 5px;
+    width: 300px;
+    margin: 10px;
+    background-color: #76c997;
+    height: 30px;
+    padding: 5px;
+    color: black;
+    font-size: revert;
+}
