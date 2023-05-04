@@ -24,10 +24,11 @@ const Dashboard = () => {
   const [visits,setVisits] = useState();
   const [adminCount, setAdminCount] = useState(0);
   const [userCount, setUserCount] = useState(0);
+  
 
   
   function updateCounter() {
-
+    
   
     fetch('http://localhost:8080/api')
       .then(res => res.json())
@@ -46,7 +47,7 @@ const Dashboard = () => {
     // Fetch data every 10 seconds
     const intervalId = setInterval(() => {
       updateCounter();
-    }, 10000);
+    }, 100000);
   
     // Clear interval on unmount
     return () => clearInterval(intervalId);
@@ -71,6 +72,7 @@ const Dashboard = () => {
     }
     fetchData();
   }, []);
+
 
   return (
     <Box m="20px">
@@ -180,6 +182,8 @@ const Dashboard = () => {
           />
         </Box>
 
+
+
         {/* ROW 2 */}
         <Box
           gridColumn="span 8"
@@ -221,6 +225,9 @@ const Dashboard = () => {
             <LineChart isDashboard={true} />
           </Box>
         </Box>
+
+
+        
         {/* <Box
           gridColumn="span 4"
           gridRow="span 2"

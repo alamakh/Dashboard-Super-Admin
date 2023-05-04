@@ -77,7 +77,7 @@ const AccountSuperAdmin = () => {
               required
               className="input"
             />
-            <div className="afficherPassw">
+            <div className="afficherPassword">
               <input type="checkbox" onClick={handleToggle} />
               show password
             </div>

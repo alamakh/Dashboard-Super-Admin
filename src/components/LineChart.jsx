@@ -1,12 +1,53 @@
 import { ResponsiveLine } from "@nivo/line";
+// import { useState, useEffect } from "react";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import { mockLineData as data } from "../data/mockData";
+import { mockLineData as  data } from "../data/mockData";
+// import axios from "axios";
 
 const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  // const [pageviews, setPageviews] = useState();
+  // const [visits, setVisits] = useState();
+  // const [adminCount, setAdminCount] = useState(0);
+  // const [userCount, setUserCount] = useState(0);
 
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/api")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setPageviews(data.pageviews);
+  //       setVisits(data.visits);
+  //       sessionStorage.setItem("visit", data.visits);
+  //       sessionStorage.setItem("pageviews", data.pageviews);
+  //       console.log("data", data);
+  //     });
+  // }, []);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await axios.get(
+  //       "http://localhost:8080/api/adminRouters/getAll"
+  //     );
+  //     setAdminCount(response.data.admins.length);
+  //   }
+  //   fetchData();
+    
+  // }, []);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await axios.get(
+  //       "http://localhost:8080/api/candidatRouters/getAll"
+  //     );
+  //     setUserCount(response.data.users.length);
+  //   }
+  //   fetchData();
+    
+  // }, []);
+  
+console.log("data is herrre ===>",data)
   return (
     <ResponsiveLine
       data={data}
