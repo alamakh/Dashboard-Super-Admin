@@ -8,7 +8,7 @@ import Users from "./scenes/Users";
 import Bar from "./scenes/bar";
 import Line from "./scenes/line";
 import Pie from "./scenes/pie";
-import Geography from "./scenes/geography";
+// import Geography from "./scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
@@ -36,7 +36,7 @@ function App() {
               <Route path="/pie" element={<Pie />} />
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
-              <Route path="/geography" element={<Geography />} />
+              {/* <Route path="/geography" element={<Geography />} /> */}
               <Route path="/" exact element={<SignInSuperAdmin />}/>
             </Routes>
           </main>
