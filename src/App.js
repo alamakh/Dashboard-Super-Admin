@@ -5,14 +5,13 @@ import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import Admins from "./scenes/Admins";
 import Users from "./scenes/Users";
-import Bar from "./scenes/bar";
-import Line from "./scenes/line";
-import Pie from "./scenes/pie";
-// import Geography from "./scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 import SignInSuperAdmin from "./scenes/login/index";
+import LineChart from "./components/LineChart";
+import BarChart from "./components/BarChart";
+import PieChart from "./components/PieChart";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -32,11 +31,10 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/admins" element={<Admins />} />
               <Route path="/users" element={<Users />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
-              {/* <Route path="/geography" element={<Geography />} /> */}
+              <Route path="/LineChart" element={<LineChart />} />
+              <Route path="/BarChart" element={<BarChart />} />
+              <Route path="/PieChart" element={<PieChart />} />
               <Route path="/" exact element={<SignInSuperAdmin />}/>
             </Routes>
           </main>

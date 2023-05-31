@@ -211,16 +211,14 @@ const Admins = () => {
                 Name :<div className="admin_data"> {selectedAdmin?.Name}</div>
                 Country :{" "}
                 <div className="admin_data">{selectedAdmin?.country}</div>
-                Town :<div className="admin_data"> {selectedAdmin?.town}</div>
               </table>
               <table>
+                Town :<div className="admin_data"> {selectedAdmin?.town}</div>
                 Adresse :{" "}
                 <div className="admin_data">{selectedAdmin?.adresse}</div>
                 Zipcode :{" "}
                 <div className="admin_data">{selectedAdmin?.Zipcode}</div>
-                phone : <div className="admin_data">{selectedAdmin?.tel}</div>
-                fiscalCode :{" "}
-                <div className="admin_data">{selectedAdmin?.fiscalCode}</div>
+                phone : <div className="admin_data">{selectedAdmin?.Phone}</div>
               </table>
             </div>
 

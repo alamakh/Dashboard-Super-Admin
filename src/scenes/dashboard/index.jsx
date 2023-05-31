@@ -1,20 +1,17 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
-// import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-// import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
-import LineChart from "../../components/LineChart";
-// import GeographyChart from "../../components/GeographyChart";
-import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import { useState,useEffect } from "react";
 // import ProgressCircle from "../../components/ProgressCircle";
 import axios from "axios";
-
+import PieChart from "../../components/PieChart";
+import BarChart from "../../components/BarChart";
+import LineChart from "../../components/LineChart";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -47,7 +44,7 @@ const Dashboard = () => {
     // Fetch data every 10 seconds
     const intervalId = setInterval(() => {
       updateCounter();
-    }, 100000);
+    }, 1000000);
   
     // Clear interval on unmount
     return () => clearInterval(intervalId);
@@ -189,6 +186,7 @@ const Dashboard = () => {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          height ="450px"
         >
           <Box
             mt="25px"
@@ -284,16 +282,17 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          height="450px"
         >
           <Typography
             variant="h5"
             fontWeight="600"
-            sx={{ padding: "30px 30px 0 30px" }}
+            sx={{ padding: "30px 30px 0 30px",marginBottom:"20px" }}
           >
             Sales Quantity
           </Typography>
           <Box height="250px" mt="-20px">
-            <BarChart isDashboard={true} />
+            <BarChart className="pie"isDashboard={true} />
           </Box>
         </Box>
         {/* <Box

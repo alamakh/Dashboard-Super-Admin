@@ -209,12 +209,10 @@ const Users = () => {
               <table>
               Adresse :<div className="user_data"> {selectedUser?.adresse}</div>
               Zipcode :<div className="user_data"> {selectedUser?.zipCode}</div>
-              Telephone : <div className="user_data">{selectedUser?.tel}</div>
+              Telephone : <div className="user_data">{selectedUser?.Phone}</div>
               Gender : <div className="user_data">{selectedUser?.gender}</div>
               Birthday :{" "}
               <div className="user_data">{selectedUser?.birthDate}</div>
-              Establishment :{" "}
-              <div className="user_data">{selectedUser?.Establishment}</div>
               </table>
             </div>
 
