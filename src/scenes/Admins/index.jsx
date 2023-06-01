@@ -87,7 +87,7 @@ const Admins = () => {
     fetchData();
   }, []);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
 
   const totalPages = Math.ceil(admins.length / itemsPerPage);
 

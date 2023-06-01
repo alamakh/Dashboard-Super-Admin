@@ -82,7 +82,7 @@ const Users = () => {
     fetchData();
   }, []);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
 
   const totalPages = Math.ceil(users.length / itemsPerPage);
 
@@ -97,7 +97,7 @@ const Users = () => {
 
   const handleDelete = (selectedUser) => {
     const confirmed = window.confirm(
-      "Are you sure you want to delete this Admin ?"
+      "Are you sure you want to delete this candidat ?"
     );
     if (!confirmed) {
       return;
@@ -122,7 +122,7 @@ const Users = () => {
 
   return (
     <>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <div className="users_gird">
         <div className="number_of_users">
           <p>Number of Candidats : {userCount}</p>
@@ -208,7 +208,7 @@ const Users = () => {
               Town : <div className="user_data">{selectedUser?.town}</div></table>
               <table>
               Adresse :<div className="user_data"> {selectedUser?.adresse}</div>
-              Zipcode :<div className="user_data"> {selectedUser?.zipCode}</div>
+              Age :<div className="user_data"> {selectedUser?.age}</div>
               Telephone : <div className="user_data">{selectedUser?.Phone}</div>
               Gender : <div className="user_data">{selectedUser?.gender}</div>
               Birthday :{" "}
