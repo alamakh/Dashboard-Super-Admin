@@ -7,6 +7,7 @@ import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import MessageIcon from "@mui/icons-material/Message";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
@@ -91,7 +92,7 @@ const Sidebar = () => {
           {!isCollapsed && (
             <Box mb="25px">
               <Box display="flex" justifyContent="center" alignItems="center">
-                <Avatar src="/broken-image.jpg"/>
+                <Avatar src="/broken-image.jpg" />
               </Box>
               <Box textAlign="center">
                 <Typography
@@ -133,6 +134,13 @@ const Sidebar = () => {
               title="Candidats"
               to="/users"
               icon={<ContactsOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Messages"
+              to="/messages"
+              icon={<MessageIcon />}
               selected={selected}
               setSelected={setSelected}
             />
