@@ -3,8 +3,6 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
 
-
-
 const BarChart = () => {
   const [revenue, setRevenue] = useState([]);
 
@@ -28,10 +26,10 @@ const BarChart = () => {
       acc[month] += expenses;
       return acc;
     }, {});
-  
+
     return countByMonth;
   }
-  
+
   const revenusCounts = countRevenueByMonth(revenue);
   console.log("Revenue by month:", revenusCounts);
   const labels = Object.keys(revenusCounts);
