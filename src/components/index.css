@@ -3,7 +3,47 @@
     margin-left: 30%;
 
 }
+.pie_label{
+    margin-left: 194px;
+
+}
+.buttonsss{
+    margin-left: 194px;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
 .line_chart{
     /* width: 1500px; */
     /* margin-left: 30%; */
+}
+.Bar_chart{
+    padding-bottom: 30px;
+
+}
+.buttonss{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
+.month_selector{
+    margin-left: 10px;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(9, 24, 38);
+    border-radius: 7px;
+    color: white;
+}
+.clear_butt{
+    margin-left: 10px;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(9, 24, 38);
+    border-radius: 7px;
+    color: white;
+    /* background-color: #151544; */
 }
