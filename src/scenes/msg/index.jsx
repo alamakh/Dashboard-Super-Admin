@@ -12,6 +12,7 @@ import InputBase from "@mui/material/InputBase";
 // import DatePicker from "react-datepicker";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import "./index.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -71,7 +72,7 @@ const Message = ({ email }) => {
     fetchData();
   }, []);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4;
+  const itemsPerPage = 8;
 
   const totalPages = Math.ceil(message.length / itemsPerPage);
 
@@ -87,7 +88,6 @@ const Message = ({ email }) => {
     const mailtoLink = `mailto:${to}`;
     window.open(mailtoLink);
   };
-  
 
   return (
     <div className="s_container">
@@ -114,11 +114,11 @@ const Message = ({ email }) => {
             <TableHead>
               <TableRow>
                 <TableCell>Email</TableCell>
-                <TableCell align="right">Name</TableCell>
-                <TableCell align="right">PhoneNumber</TableCell>
-                <TableCell align="right">Message</TableCell>
-                <TableCell align="right">Date</TableCell>
-                <TableCell align="right">Action</TableCell>
+                <TableCell align="center">Name</TableCell>
+                <TableCell align="center">PhoneNumber</TableCell>
+                <TableCell align="center">Message</TableCell>
+                <TableCell align="center">Date</TableCell>
+                <TableCell align="center">Action</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -136,11 +136,23 @@ const Message = ({ email }) => {
                       <TableCell component="th" scope="row">
                         {messag.email}
                       </TableCell>
-                      <TableCell align="right">{messag.Name}</TableCell>
-                      <TableCell align="right">{messag.phoneNumber}</TableCell>
-                      <TableCell align="right">{messag.message} </TableCell>
-                      <TableCell align="right">{messag.date}</TableCell>
-                      <TableCell align="right"> <button onClick={() => handleReply(messag.email)}> Répondre </button></TableCell>
+                      <TableCell align="center">{messag.Name}</TableCell>
+                      <TableCell align="center">{messag.phoneNumber}</TableCell>
+                      <TableCell
+                        align="center"
+                        classes="message"
+                        style={{ width: "100px" }}
+                      >
+                        <div className="message-max-width-container">
+                          <label className="message-max-width">{messag.message}</label>
+                        </div>
+                      </TableCell>
+                      <TableCell align="center">{messag.date}</TableCell>
+                      <TableCell align="center">
+                        <button onClick={() => handleReply(messag.email)}>
+                          Répondre
+                        </button>
+                      </TableCell>
                     </TableRow>
                   ))
               ) : (
