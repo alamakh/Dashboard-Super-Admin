@@ -56,10 +56,10 @@ const AccountSuperAdmin = () => {
         <div className="left">
           <form onSubmit={handleSubmit}>
             <h1 className="title">Account Super_Admin</h1>
-            <label className="user_name">User Name : </label>
+            
             <input
               type="text"
-              placeholder="user name"
+              placeholder="User_Name"
               name="userName"
               onChange={handleChange}
               value={formData.userName}
@@ -67,7 +67,6 @@ const AccountSuperAdmin = () => {
               className="input"
             />
             <br />
-            <label className="password">Password : </label>
             <input
               type={type}
               placeholder="Password"
@@ -79,10 +78,10 @@ const AccountSuperAdmin = () => {
             />
             <div className="afficherPassword">
               <input type="checkbox" onClick={handleToggle} />
-              show password
+                show password
             </div>
             {error && <div className="error_msg">{error}</div>}
-            <button type="submit" className="btn">
+            <button type="submit" className="btn_signIn_SupA">
               Sign In
             </button>
           </form>
