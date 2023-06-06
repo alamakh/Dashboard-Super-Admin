@@ -32,17 +32,20 @@
     display: flex;
 }
 .button_display{
-    background-color: #389b5f;
+    background-color:#389b5f;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    width:100px;
+    height: 40px;
     font-size: 15px;
-    font-weight: 500;
+    /* font-weight: 500; */
     outline: none;
     transform: translateY(2px);
     text-decoration: none;   
     cursor: pointer;
     transition-duration: 0.4s;
     color: white;
+    margin: 10px;
 }
 .pagination_container{
     display: flex;
@@ -81,6 +84,10 @@
     top: 10px;
     right: 10px;
     padding: 5px 7px;
+    background-color: rgb(100, 206, 30);
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
 }
 .body.active-popup{
     overflow-y: hidden;
@@ -99,6 +106,7 @@
     padding: 5px;
     color: black;
     font-size: revert;
+    margin : 25px;
 }
 .users_containerr{
     width: 500px;

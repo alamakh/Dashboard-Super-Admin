@@ -5,13 +5,12 @@
   padding: 20px;
 }
 
-.search_container {
-  margin-bottom: 20px;
-}
-
 .search_input {
   width: 200px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+}
+.search_container{
+  width: 1600px;
 }
 
 .pagination_container {
@@ -55,8 +54,9 @@
 }
 .btn_Respond{
   border-radius: 20px;
-  background-color: aquamarine;
+  background-color:#389b5f;
   cursor: pointer;
   width: 100px;
   height: 40px;
+  color: white;
 }
