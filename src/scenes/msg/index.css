@@ -53,3 +53,10 @@
 .message-max-width:hover {
   -webkit-line-clamp: initial;
 }
+.btn_Respond{
+  border-radius: 20px;
+  background-color: aquamarine;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+}

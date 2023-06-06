@@ -149,15 +149,15 @@ const Message = ({ email }) => {
                       </TableCell>
                       <TableCell align="center">{messag.date}</TableCell>
                       <TableCell align="center">
-                        <button onClick={() => handleReply(messag.email)}>
-                          Répondre
+                        <button className="btn_Respond" onClick={() => handleReply(messag.email)}>
+                        Respond
                         </button>
                       </TableCell>
                     </TableRow>
                   ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={5}>No messages to display</TableCell>
+                  <TableCell colSpan={5}> No messages to display </TableCell>
                 </TableRow>
               )}
             </TableBody>
