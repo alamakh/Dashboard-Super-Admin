@@ -136,7 +136,7 @@ const Message = ({ email }) => {
                       <TableCell component="th" scope="row">
                         {messag.email}
                       </TableCell>
-                      <TableCell align="center">{messag.Name}</TableCell>
+                      <TableCell align="center">{messag.name}</TableCell>
                       <TableCell align="center">{messag.phoneNumber}</TableCell>
                       <TableCell
                         align="center"

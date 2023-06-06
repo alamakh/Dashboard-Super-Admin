@@ -30,10 +30,10 @@ const Dashboard = () => {
     fetch('http://localhost:8080/api')
       .then(res => res.json())
       .then(data => {
-        setPageviews(data.pageviews);
-        setVisits(data.visits);
-        sessionStorage.setItem('visit', data.visits);
-        sessionStorage.setItem('pageviews', data.pageviews);
+        setPageviews(data?.pageviews);
+        setVisits(data?.visits);
+        sessionStorage.setItem('visit', data?.visits);
+        sessionStorage.setItem('pageviews', data?.pageviews);
         console.log("data",data);
       });
   }

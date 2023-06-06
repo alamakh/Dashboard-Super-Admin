@@ -207,18 +207,18 @@ const Admins = () => {
               <table>
                 Email : <div className="admin_data">{selectedAdmin?.email}</div>
                 Type of user :
-                <div className="admin_data">{selectedAdmin?.TypeOfUser}</div>
-                Name :<div className="admin_data"> {selectedAdmin?.Name}</div>
+                <div className="admin_data">{selectedAdmin?.typeOfUser}</div>
+                Name :<div className="admin_data"> {selectedAdmin?.name}</div>
                 Country :{" "}
                 <div className="admin_data">{selectedAdmin?.country}</div>
               </table>
               <table>
                 Town :<div className="admin_data"> {selectedAdmin?.town}</div>
-                Adresse :{" "}
-                <div className="admin_data">{selectedAdmin?.adresse}</div>
+                Address :{" "}
+                <div className="admin_data">{selectedAdmin?.address}</div>
                 Zipcode :{" "}
-                <div className="admin_data">{selectedAdmin?.Zipcode}</div>
-                phone : <div className="admin_data">{selectedAdmin?.Phone}</div>
+                <div className="admin_data">{selectedAdmin?.zipcode}</div>
+                Phone : <div className="admin_data">{selectedAdmin?.phone}</div>
               </table>
             </div>
 
