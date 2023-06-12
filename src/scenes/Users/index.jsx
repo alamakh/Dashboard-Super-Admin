@@ -122,7 +122,6 @@ const Users = () => {
 
   return (
     <>
-      {/* <ToastContainer /> */}
       <div className="users_gird">
         <div className="number_of_users">
           <p>Number of Candidats : {userCount}</p>
@@ -170,7 +169,7 @@ const Users = () => {
                       Display
                     </button>
                     <button
-                      className="button_display"
+                      className="button_delete"
                       type="submit"
                       onClick={() => handleDelete(selectedUser)}
                     >
@@ -207,9 +206,9 @@ const Users = () => {
               Country :<div className="user_data"> {selectedUser?.country}</div>
               Town : <div className="user_data">{selectedUser?.town}</div></table>
               <table>
-              Adresse :<div className="user_data"> {selectedUser?.adresse}</div>
+              Address :<div className="user_data"> {selectedUser?.address}</div>
               Age :<div className="user_data"> {selectedUser?.age}</div>
-              Telephone : <div className="user_data">{selectedUser?.Phone}</div>
+              Phone : <div className="user_data">{selectedUser?.phone}</div>
               Gender : <div className="user_data">{selectedUser?.gender}</div>
               Birthday :{" "}
               <div className="user_data">{selectedUser?.birthDate}</div>

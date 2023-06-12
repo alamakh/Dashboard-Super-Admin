@@ -30,10 +30,10 @@ const Dashboard = () => {
     fetch('http://localhost:8080/api')
       .then(res => res.json())
       .then(data => {
-        setPageviews(data.pageviews);
-        setVisits(data.visits);
-        sessionStorage.setItem('visit', data.visits);
-        sessionStorage.setItem('pageviews', data.pageviews);
+        setPageviews(data?.pageviews);
+        setVisits(data?.visits);
+        sessionStorage.setItem('visit', data?.visits);
+        sessionStorage.setItem('pageviews', data?.pageviews);
         console.log("data",data);
       });
   }
@@ -77,20 +77,6 @@ const Dashboard = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
-        <Box>
-          <Button
-            sx={{
-              backgroundColor: colors.blueAccent[700],
-              color: colors.grey[100],
-              fontSize: "14px",
-              fontWeight: "bold",
-              padding: "10px 20px",
-            }}
-          >
-            <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-            Download Reports
-          </Button>
-        </Box>
       </Box>
 
       {/* GRID & CHARTS */}

@@ -32,7 +32,7 @@
     height: 30px;
     padding: 5px;
     cursor: pointer;
-    background-color: rgb(9, 24, 38);
+    background-color: transparent;
     border-radius: 7px;
     color: white;
 }
@@ -42,8 +42,8 @@
     height: 30px;
     padding: 5px;
     cursor: pointer;
-    background-color: rgb(9, 24, 38);
+    background-color: transparent;
     border-radius: 7px;
-    color: white;
+    color: rgb(148, 148, 148);
     /* background-color: #151544; */
 }

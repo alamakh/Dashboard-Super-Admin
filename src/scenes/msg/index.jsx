@@ -43,6 +43,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -136,7 +137,7 @@ const Message = ({ email }) => {
                       <TableCell component="th" scope="row">
                         {messag.email}
                       </TableCell>
-                      <TableCell align="center">{messag.Name}</TableCell>
+                      <TableCell align="center">{messag.name}</TableCell>
                       <TableCell align="center">{messag.phoneNumber}</TableCell>
                       <TableCell
                         align="center"
