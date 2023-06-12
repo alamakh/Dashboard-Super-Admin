@@ -122,7 +122,6 @@ const Users = () => {
 
   return (
     <>
-      {/* <ToastContainer /> */}
       <div className="users_gird">
         <div className="number_of_users">
           <p>Number of Candidats : {userCount}</p>
@@ -170,7 +169,7 @@ const Users = () => {
                       Display
                     </button>
                     <button
-                      className="button_display"
+                      className="button_delete"
                       type="submit"
                       onClick={() => handleDelete(selectedUser)}
                     >

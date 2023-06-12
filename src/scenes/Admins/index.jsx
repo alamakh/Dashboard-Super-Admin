@@ -117,7 +117,7 @@ const Admins = () => {
           prevAdmins.filter((o) => o._id !== selectedAdmin._id)
         );
         console.log("Deleted", response);
-        toast.success("Deleted successfully!");
+        // toast.success("Deleted successfully!");
       })
       .catch((error) => {
         console.log(error);
@@ -127,7 +127,6 @@ const Admins = () => {
 
   return (
     <>
-      <ToastContainer />
       <div className="Admin_gird">
         <div className="number_of_admins">
           <p>Number of Admins : {adminCount}</p>
@@ -175,7 +174,7 @@ const Admins = () => {
                       Display
                     </button>
                     <button
-                      className="button_display"
+                      className="button_delete"
                       type="submit"
                       onClick={() => handleDelete(selectedAdmin)}
                     >
@@ -202,7 +201,7 @@ const Admins = () => {
       {popup && (
         <div className="popup_container" style={{ zIndex: "10" }}>
           <div className="overlay" onClick={() => toggleModel(null)}></div>
-          <div className="popu_content">
+          <div className="popu_conten">
             <div className="admin_info">
               <table>
                 Email : <div className="admin_data">{selectedAdmin?.email}</div>
@@ -223,7 +222,7 @@ const Admins = () => {
             </div>
 
             <button
-              className="close_popup"
+              className="close_popu"
               type="button"
               onClick={() => toggleModel(null)}
             >
