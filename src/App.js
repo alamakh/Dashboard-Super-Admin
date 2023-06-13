@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
@@ -14,11 +14,16 @@ import SignInSuperAdmin from "./scenes/login/index";
 import LineChart from "./components/LineChart";
 import BarChart from "./components/BarChart";
 import PieChart from "./components/PieChart";
+import checkTokenExpiration from "./VerifyTokenExpiration";
 
 function App() {
   const token = localStorage.getItem("token");
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
+
+  useEffect(() => {
+    checkTokenExpiration();
+  }, []);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
