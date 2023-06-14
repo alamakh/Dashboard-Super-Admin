@@ -90,6 +90,8 @@ const Message = ({ email }) => {
     window.open(mailtoLink);
   };
 
+  
+
   return (
     <div className="s_container">
       <div className="search_container">
@@ -125,13 +127,11 @@ const Message = ({ email }) => {
             <TableBody>
               {currentMessage.length > 0 ? (
                 currentMessage
-                  .filter((messag) => {
-                    const searchValue = search.toLowerCase();
-                    const resultValue = messag?.email;
-                    return searchValue === ""
-                      ? message
-                      : resultValue >= parseInt(searchValue);
-                  })
+                .filter((messag) => {
+                  const searchValue = search.toLowerCase();
+                  const resultValue = messag?.email;
+                  return searchValue === "" ? true : resultValue.includes(searchValue);
+                })
                   .map((messag, _id) => (
                     <TableRow key={messag._id}>
                       <TableCell component="th" scope="row">
