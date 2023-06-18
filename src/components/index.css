@@ -19,7 +19,14 @@
 }
 .Bar_chart{
     padding-bottom: 30px;
+    max-width: 100%;
 
+}
+.chart_bar{
+    box-sizing: border-box;
+    display: block;
+    height: 433px;
+    width: 1265.6px;
 }
 .buttonss{
     display: flex;

@@ -1,8 +1,3 @@
-// import { Box, Typography, useTheme } from "@mui/material";
-// import { DataGrid } from "@mui/x-data-grid";
-// import { tokens } from "../../theme";
-// import { mockDataTeam } from "../../data/mockData";
-// import Header from "../../components/Header";
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -117,7 +112,7 @@ const Admins = () => {
           prevAdmins.filter((o) => o._id !== selectedAdmin._id)
         );
         console.log("Deleted", response);
-        // toast.success("Deleted successfully!");
+        toast.success("Deleted successfully!");
       })
       .catch((error) => {
         console.log(error);
@@ -149,6 +144,7 @@ const Admins = () => {
           </Search>
         </div>
         <div className="Admin">
+        <ToastContainer/>
           {currentAdmins.length > 0 ? (
             currentAdmins
               .filter((selectedAdmin) => {

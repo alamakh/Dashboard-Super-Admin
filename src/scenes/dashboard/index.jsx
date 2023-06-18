@@ -172,7 +172,7 @@ const Dashboard = () => {
            gridColumn="span 7"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-           height ="400px"
+           height ="460px"
           style={{paddingTop:"20px",paddingBottom:"20px"}}
         >
           <Box
@@ -190,13 +190,6 @@ const Dashboard = () => {
               >
                 Revenue Generated
               </Typography>
-              {/* <Typography
-                variant="h3"
-                fontWeight="bold"
-                color={colors.greenAccent[500]}
-              >
-                $59,342.32
-              </Typography> */}
             </Box>
             <Box>
               <IconButton>

@@ -108,7 +108,7 @@ const BarChart = () => {
           Clear
         </button>
       </div>
-      <Bar data={data} />
+      <Bar className="chart_bar" data={data} />
     </div>
   );
 };
