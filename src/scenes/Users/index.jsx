@@ -5,6 +5,7 @@ import Avatar from "@mui/material/Avatar";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
@@ -125,6 +126,7 @@ const Users = () => {
       <div className="users_gird">
         <div className="number_of_users">
           <p>Number of Candidats : {userCount}</p>
+          
         </div>
         <div className="search_container">
           <Search>
@@ -144,6 +146,7 @@ const Users = () => {
           </Search>
         </div>
         <div className="users">
+        <ToastContainer/>
           {currentUsers.length > 0 ? (
             currentUsers
               .filter((selectedUser) => {
