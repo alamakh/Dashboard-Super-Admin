@@ -9,7 +9,6 @@ import StatBox from "../../components/StatBox";
 import { useState,useEffect } from "react";
 // import ProgressCircle from "../../components/ProgressCircle";
 import axios from "axios";
-import PieChart from "../../components/PieChart";
 import BarChart from "../../components/BarChart";
 import LineChart from "../../components/LineChart";
 
