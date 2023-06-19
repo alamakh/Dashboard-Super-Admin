@@ -30,9 +30,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          {token && <Sidebar isSidebar={isSidebar} />}
+          {token && window.location.pathname !== "/" && <Sidebar isSidebar={isSidebar} />}
           <main className="content">
-            {token && <Topbar setIsSidebar={setIsSidebar} />}
+            {token && window.location.pathname !== "/" && <Topbar setIsSidebar={setIsSidebar} />}
             <Routes>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/admins" element={<Admins />} />
