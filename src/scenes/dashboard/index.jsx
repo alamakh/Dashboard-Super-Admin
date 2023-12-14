@@ -151,7 +151,7 @@ const Dashboard = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <StatBox
+          {/* <StatBox
             title={visits}
             subtitle="Traffic Received"
             progress="0.80"
@@ -161,7 +161,7 @@ const Dashboard = () => {
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
-          />
+          /> */}
         </Box>
 
 
