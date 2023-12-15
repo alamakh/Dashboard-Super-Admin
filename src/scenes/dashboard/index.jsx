@@ -10,7 +10,7 @@ import { useState,useEffect } from "react";
 // import ProgressCircle from "../../components/ProgressCircle";
 import axios from "axios";
 import BarChart from "../../components/BarChart";
-import LineChart from "../../components/LineChart";
+import PieChart from "../../components/PieChart";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -202,6 +202,10 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
+
+          <Box width={"100%"} m="-20px 0 0 0">
+            <PieChart isDashboard={true} />
+
         <Box width={"100%"} m="-20px 0 0 0"> 
             <LineChart isDashboard={true} />
           </Box>
