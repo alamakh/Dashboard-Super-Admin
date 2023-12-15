@@ -36,6 +36,8 @@ const Dashboard = () => {
         console.log("data",data);
       });
   }
+
+  /* This haroun talking from my branch 'haroun' hope you are doing well all of you and thanks */
   
   useEffect(() => {
     updateCounter();
@@ -151,7 +153,7 @@ const Dashboard = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <StatBox
+          {/* <StatBox
             title={visits}
             subtitle="Traffic Received"
             progress="0.80"
@@ -161,11 +163,11 @@ const Dashboard = () => {
                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
               />
             }
-          />
+          /> */}
         </Box>
 
 
-
+      
         {/* ROW 2 */}
         <Box
            gridColumn="span 7"
@@ -173,7 +175,9 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
            height ="460px"
           style={{paddingTop:"20px",paddingBottom:"20px"}}
+        
         >
+        
           <Box
             // mt="25px"
             p="0 30px"
@@ -198,13 +202,21 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
+
           <Box width={"100%"} m="-20px 0 0 0">
             <PieChart isDashboard={true} />
+
+        <Box width={"100%"} m="-20px 0 0 0"> 
+            <LineChart isDashboard={true} />
           </Box>
+          
+          
         </Box>
+        
 
-
+        
         {/* ROW 3 */}
+        {/*
               <Box
           gridColumn="span 5"
           gridRow="span 2"
@@ -223,7 +235,7 @@ const Dashboard = () => {
             <BarChart className="pie"isDashboard={true} />
           </Box>
         </Box>
-
+           */}
       </Box>
     </Box>
   );
