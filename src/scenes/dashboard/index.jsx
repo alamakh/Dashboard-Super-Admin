@@ -206,7 +206,7 @@ const Dashboard = () => {
 
 
         <Box width={"80%"} m="-20px 0 0 0"> 
-            <LineChart isDashboard={true} />
+            <BarChart isDashboard={true} />
           </Box>
           
           
