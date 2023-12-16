@@ -11,6 +11,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import BarChart from "../../components/BarChart";
 import PieChart from "../../components/PieChart";
+import LineChart from "../../components/LineChart"
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -146,13 +147,13 @@ const Dashboard = () => {
           />
         </Box>
  
-        <Box
+        {/* <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
           justifyContent="center"
-        >
+        > */}
           {/* <StatBox
             title={visits}
             subtitle="Traffic Received"
@@ -164,16 +165,16 @@ const Dashboard = () => {
               />
             }
           /> */}
-        </Box>
+        {/* </Box> */}
 
 
       
         {/* ROW 2 */}
         <Box
-           gridColumn="span 7"
+           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-           height ="460px"
+           height ="500px"
           style={{paddingTop:"20px",paddingBottom:"20px"}}
         
         >
@@ -203,25 +204,23 @@ const Dashboard = () => {
             </Box>
           </Box>
 
-          <Box width={"100%"} m="-20px 0 0 0">
-            <PieChart isDashboard={true} />
 
-        <Box width={"100%"} m="-20px 0 0 0"> 
+        <Box width={"80%"} m="-20px 0 0 0"> 
             <LineChart isDashboard={true} />
           </Box>
           
           
-        </Box>
+       
         
 
         
         {/* ROW 3 */}
-        {/*
-              <Box
+        
+              {/* <Box
           gridColumn="span 5"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          height="400px"
+          height="200px"
         >
           <Typography
             variant="h5"
@@ -232,11 +231,12 @@ const Dashboard = () => {
             Revenue By Month
           </Typography>
           <Box height="250px" mt="-20px">
-            <BarChart className="pie"isDashboard={true} />
+            <PieChart className="pie" isDashboard={true} />
           </Box>
-        </Box>
-           */}
+        </Box> */}
+          
       </Box>
+    </Box>
     </Box>
   );
 };
